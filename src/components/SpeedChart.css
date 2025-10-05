@@ -1,0 +1,110 @@
+.speed-chart {
+  margin-bottom: 2rem;
+}
+
+.speed-chart h3 {
+  margin-bottom: 1.5rem;
+  color: #4a5568;
+  font-size: 1.3rem;
+}
+
+.no-data {
+  text-align: center;
+  padding: 2rem;
+  color: #718096;
+  background: #f7fafc;
+  border-radius: 12px;
+  border: 2px dashed #e2e8f0;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.chart-section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.chart-section h4 {
+  margin-bottom: 1rem;
+  color: #4a5568;
+  font-size: 1.1rem;
+}
+
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bar-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bar-label {
+  min-width: 200px;
+  font-weight: 500;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.bar-container {
+  flex: 1;
+  position: relative;
+  height: 30px;
+  background: #f7fafc;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 15px;
+  transition: width 0.8s ease;
+  position: relative;
+}
+
+.speed-bar {
+  background: linear-gradient(90deg, #48bb78, #38a169);
+}
+
+.time-bar {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.bar-value {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.9rem;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .bar-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .bar-label {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .bar-container {
+    width: 100%;
+  }
+}
